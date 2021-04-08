@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:10:36:30 -0500] "GET / HTTP/1.1" 200 52 http-bio-8080-exec-1 761
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:10:36:30 -0500] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-2 4
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:10:37:45 -0500] "GET /helloServlet HTTP/1.1" 200 16 http-bio-8080-exec-4 3
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:21:22:46 -0500] "GET /helloServlet HTTP/1.1" 200 16 http-bio-8080-exec-1 47
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:21:22:47 -0500] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-2 4
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:21:23:03 -0500] "GET /helloServlet?name=Brayan HTTP/1.1" 200 22 http-bio-8080-exec-4 1
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:21:24:37 -0500] "GET /helloServlet?name=Brayan HTTP/1.1" 200 23 http-bio-8080-exec-1 36
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:21:25:28 -0500] "GET /helloServlet?name=Brayan HTTP/1.1" 200 23 http-bio-8080-exec-3 1
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:21:25:32 -0500] "GET /helloServlet?name=Brayan HTTP/1.1" 200 23 http-bio-8080-exec-4 1
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:21:52:56 -0500] "GET /helloServlet HTTP/1.1" 200 17 http-bio-8080-exec-1 37
+0:0:0:0:0:0:0:1 - - [03/Mar/2021:21:53:13 -0500] "GET /helloServlet?name=Brayan HTTP/1.1" 200 23 http-bio-8080-exec-3 2

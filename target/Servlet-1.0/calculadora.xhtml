@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+		<title>Calculadora</title>
+	</h:head>
+	
+	<h:body>
+		<h:form id="calculadora_form">
+			<br/><p:outputLabel value="(Separe los números con ', ')" />
+			<b><p:outputLabel value="VALUES: "/></b> <p:inputText id="Values" type="text" binding="#{input}" />
+
+			<br/><p:outputLabel value="Mean: " /> <p:outputLabel value="#{CalculadoraBean.mean}" style="display:none" />
+			<br/><p:outputLabel value="Mode: " /> <p:outputLabel value="#{CalculadoraBean.mode}" style="display:none" />
+			<br/><p:outputLabel value="Variance: " /> <p:outputLabel value="#{CalculadoraBean.variance}" style="display:none" />
+			<br/><p:outputLabel value="Standard Deviation: " /> <p:outputLabel value="#{CalculadoraBean.standardDeviation}" style="display:none" />
+
+			<p><br/><p:commandButton value="Calculate" update="calculadora_form" actionListener="#{calculadoraBean.setValues(input.value)}" /></p>
+			<p><br/><p:commandButton value="RESTART" update="calculadora_form" actionListener="#{calculadoraBean.restart()}" /></p>
+		</h:form>
+	</h:body>
+
+</html>
