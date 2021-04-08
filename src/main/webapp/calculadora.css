@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+
+#cabecera{
+	font:normal 2em Arial;
+	text-align:center;
+	background:-webkit-linear-gradient(top,#20AE09, #45F337);
+	width:35%;
+	border-radius:10px;
+	margin: 15px auto;
+	padding: 15px auto;
+
+}
+
+body{
+	background-color:#43BBB5;
+}
+
+#p{
+	font: italic bold Arial;
+}
+
+#centrar{
+	margin: 15px auto;
+	padding: 15px auto;
+}
