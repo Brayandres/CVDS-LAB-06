@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
+<html
+	xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 
-        <script>
-            function validateForm() {
-	            var x = document.forms["myForm"]["id"].value;
-	            alert("This is: " + x);
-	            if (isNaN(parseInt(x, 10))) { //Restricted to an Integer
-                	alert("Type of x: String");
-	                alert("Value must be an Integer");
-	                return false;
-	            } else {
-                	alert("Type of x: " + typeof parseInt(x, 10));
-                    //return true;
-                }
-            }
-        </script>
-        <h1>Welcome!</h1>
-        
-	    <form name="myForm" action="/OwnServlet?id=" onsubmit="return validateForm()" method="get">
-		    ID value to find: <input type="text" name="id">
-		    <input type="submit" value="Submit">
-	    </form>   
+	<h:head>
+		<title>Calculadora</title>
+		<link href="estilo.css" rel="stylesheet"/>
+	</h:head>
+	
+	<h:body>
+		<h:form id="calculadora_form">
+			<p:outputLabel value="(Separe numbers by ', ')" />
+			<br/><b><p:outputLabel value="VALUES: "/></b> <p:inputText id="Values" type="text" binding="#{input}" />
 
-    </body>
+			<br/><p:outputLabel value="Mean: " /> <p:outputLabel value="#{CalculadoraBean.mean}" style="display:none" />
+			<br/><p:outputLabel value="Mode: " /> <p:outputLabel value="#{CalculadoraBean.mode}" style="display:none" />
+			<br/><p:outputLabel value="Variance: " /> <p:outputLabel value="#{CalculadoraBean.variance}" style="display:none" />
+			<br/><p:outputLabel value="Standard Deviation: " /> <p:outputLabel value="#{CalculadoraBean.standardDeviation}" style="display:none" />
+
+			<p><br/><p:commandButton value="Calculate" update="calculadora_form" actionListener="#{CalculadoraBean.setValues(input.value)}" /></p>
+			<p><br/><p:commandButton value="RESTART" update="calculadora_form" actionListener="#{CalculadoraBean.restart()}" /></p>
+		</h:form>
+	</h:body>
+
 </html>

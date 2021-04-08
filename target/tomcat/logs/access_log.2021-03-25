@@ -1,5 +1,0 @@
-0:0:0:0:0:0:0:1 - - [25/Mar/2021:11:54:34 -0500] "GET /helloServlet HTTP/1.1" 200 17 http-bio-8080-exec-1 95
-0:0:0:0:0:0:0:1 - - [25/Mar/2021:11:54:55 -0500] "GET /helloServlet?name=Brayan HTTP/1.1" 200 23 http-bio-8080-exec-3 3
-0:0:0:0:0:0:0:1 - - [25/Mar/2021:11:56:17 -0500] "GET /OwnServlet?id=4 HTTP/1.1" 200 161 http-bio-8080-exec-5 5376
-0:0:0:0:0:0:0:1 - - [25/Mar/2021:11:57:31 -0500] "GET /index.html HTTP/1.1" 200 985 http-bio-8080-exec-7 12
-0:0:0:0:0:0:0:1 - - [25/Mar/2021:11:57:38 -0500] "GET /OwnServlet?id=4 HTTP/1.1" 200 161 http-bio-8080-exec-8 350
